@@ -1,0 +1,26 @@
+[project]
+name = "abiense-userbot"
+version = "0.1.0"
+description = "Abiense Userbot — modular Telegram userbot with premium UX and plugin SDK"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pyrogram>=2.0.106",
+  "tgcrypto>=1.2.5",
+  "pydantic>=2.7.0",
+  "pydantic-settings>=2.2.1",
+]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.5.0"]
+
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["abiense_userbot*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
